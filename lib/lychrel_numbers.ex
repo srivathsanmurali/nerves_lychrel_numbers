@@ -1,0 +1,3 @@
+defmodule LychrelNumbers do
+  
+end

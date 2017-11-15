@@ -35,7 +35,7 @@ defmodule LychrelNumbers.ProblemStore do
 
   defp serve_jobs(limit) when limit > 0 do
     {count, events} = LychrelNumbers.Problem.take(limit)
-    Process.send_after(@name, :enqueued, 1_000)
+    Process.send_after(@name, :enqueued, 60_000)
     {:noreply, events, limit - count}
   end
 
